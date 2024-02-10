@@ -941,8 +941,8 @@ transform: translateY(-5);
 /*---- pluses ----*/
 
 .pluses {
-  margin: 50px 0 50px;
-  min-height: 21vh;
+  margin: 5vh 0; /* Отступы сверху и снизу в зависимости от размера экрана */
+  min-height: 21vh; /* Минимальная высота блока */
   width: 85%;
   margin: 0 auto;
   border-radius: var(--border-radius);
@@ -955,23 +955,19 @@ transform: translateY(-5);
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px 0px 20px 0;
-  margin-bottom: 80px;
-  margin-top: 100px;
+  padding: 20px 0;
 }
 
 .mission-content {
   max-width: 1000px;
-  width: 100%;
+  width: 90%; /* Ширина контента в процентах */
   display: flex;
   justify-content: space-between;
   flex-direction: column; /* Добавляем это для мобильных версий */
 }
 
 .pluses h1 {
-  margin-top: 20px;
-  margin-left: 20px; /* Уменьшение отступа слева */
-  font-size: 78px;
+  font-size: 4em; /* Используйте em для размера шрифта */
   font-weight: 600;
   color: #fff;
   margin-bottom: 10px;
@@ -981,13 +977,10 @@ transform: translateY(-5);
 .pluses p {
   text-align: left;
   color: #c4c4c4;
-  font-size: 19px;
+  font-size: 1.4em; /* Используйте em для размера шрифта */
   font-weight: 500;
-  padding: 55px 20px; /* Уменьшение отступов внутри параграфа */
+  padding: 20px; /* Используйте относительные единицы для отступов */
   line-height: 1.4;
-  margin-left: 20px; /* Отступ слева */
-  flex: 1; /* Растягиваем параграф на всю доступную ширину */
-  max-width: 500px; /* Максимальная ширина параграфа */
 }
 
 @media (max-width: 767px) {
@@ -1001,14 +994,14 @@ transform: translateY(-5);
   .pluses h1 {
     margin-top: 0px;
     margin-left: 0px;
-    font-size: 46px; /* Уменьшаем размер шрифта для мобильных версий */
+    font-size: 2.5em; /* Уменьшаем размер шрифта для мобильных версий */
     text-align: center;
-    padding-top: 10px;
+    padding-top: 15px;
     margin-bottom: 0px;
   }
   .pluses p {
-    padding: 20px;
-    font-size: 15px; /* Уменьшаем размер шрифта для мобильных версий */
+    padding: 10px;
+    font-size: 0.9em; /* Уменьшаем размер шрифта для мобильных версий */
     text-align: center;
   }
 }
