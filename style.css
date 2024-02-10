@@ -93,8 +93,8 @@ position: fixed;
 top: 0;
 left: 0;
 width: 100%;
-height: 15%;
-background: linear-gradient(to bottom, rgba(0, 0, 0, 0.87) 0%, rgba(0, 0, 0, 0) 100%);
+height: 20%;
+background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
 pointer-events: none; /* Позволяет кликать через этот элемент */
 z-index: 1;
 resize: horizontal; /* Добавлено для отключения изменений при вертикальном ресайзе */
@@ -160,7 +160,7 @@ border-radius: 10px;
 overflow: hidden;
 margin: 35px;
 width: 360px;
-box-shadow: 0 4px 8px rgba(165, 165, 165, 0.055);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.082);
 transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 .news-item:hover img {
@@ -184,7 +184,7 @@ position: relative;
 }
 .news-content .newsbio {
   color: #0c0c0c;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   overflow: hidden; /* Скрываем лишний контент, который превышает фиксированную высоту */
   height: 50px; /* Фиксированная высота */
 }
@@ -200,7 +200,7 @@ font-size: 0.9rem;
 margin-bottom: 0px;
 }
 .news-description {
-margin-bottom: 10px;
+margin-bottom: 0px;
 }
 .read-more-btn {
 background-color: #524FD5;
@@ -254,7 +254,7 @@ padding-top: 30px;
   transform: translateX(-50%);
 }
 .questions-container{
-max-width: 91vh;
+max-width: 90vh;
 margin: 0 auto;
 }
 .accordion-text .title {
@@ -305,10 +305,14 @@ color: #00000096;
 .question button .d-arrow.rotate{
 transform: rotate(180deg);
 }
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .accordion-text .title {
     font-size: 32px;
   }
+  .questions-container{
+    max-width: 40vh;
+    margin: 0 auto;
+    }
   .question span {
     font-size: 20px;
     }
@@ -388,7 +392,7 @@ opacity: 0;
 }
 
 .header {
-min-height: 80vh;
+min-height: 100vh;
 width: 100%;
 position: relative;
 overflow: hidden;
@@ -404,21 +408,16 @@ object-fit: cover;
 filter: brightness(50%); /* Затемнение видео, значение от 0% до 100% */
 z-index: -1;
 }
-iframe {
-  width: 100%;
-  height: 100%;
-}
 .logo-container {
-display: flex;
-justify-content: center;
-align-items: center;
-z-index: 1209;
-margin: 55px auto;
-z-index: 1500;
+  position: fixed;
+  top: 1%;
+  left: 50%; /* Расположение по центру */
+  transform: translateX(-50%); /* Центрирование логотипа */
+  z-index: 1000; /* Убедитесь, что z-index выше, чем у других элементов */
 }
 .header .logo {
 width: 100%;
-max-width: 200px;
+max-width: 180px;
 height: 100%;
 z-index: 1500;
 }
@@ -776,7 +775,7 @@ width: 100px; /* Уменьшаем ширину для маленьких эк�
   text-align: center;
 }
 .text-box h1 {
-  font-size: 80px;
+  font-size: 115px;
   color: #ffffff;
   font-weight: 600;
 }
@@ -899,16 +898,6 @@ color: #838383;
 #secondbox {
 transform: translateY(-5);
 }
-.home::before{
-content:'';
-position: absolute;
-bottom: -55rem; left:50%;
-transform: translateX(-50%);
-border-top: 70vh solid #f0f0f0;
-width: 100%;
-border-radius: 50%;
-z-index: -1;
-}
 @media (max-width: 400px) {
   .box-container .box {
     height: 18rem;
@@ -954,7 +943,9 @@ z-index: -1;
 .pluses {
   margin: 50px 0 50px;
   min-height: 21vh;
-  width: 100%;
+  width: 85%;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
   background-image: radial-gradient(circle at center , #000000c4 5%, #1a002b 55%), url(images/mission2.jpg);
   background-blend-mode: normal, multiply;
   background-position: center;
@@ -965,6 +956,8 @@ z-index: -1;
   align-items: center;
   text-align: center;
   padding: 20px 0px 20px 0;
+  margin-bottom: 80px;
+  margin-top: 100px;
 }
 
 .mission-content {
@@ -976,6 +969,8 @@ z-index: -1;
 }
 
 .pluses h1 {
+  margin-top: 20px;
+  margin-left: 20px; /* Уменьшение отступа слева */
   font-size: 78px;
   font-weight: 600;
   color: #fff;
@@ -988,34 +983,54 @@ z-index: -1;
   color: #c4c4c4;
   font-size: 19px;
   font-weight: 500;
-  line-height: 25px;
-  padding: 50px;
-  margin-left: 0; /* Убираем отступ для мобильных версий */
+  padding: 55px 20px; /* Уменьшение отступов внутри параграфа */
+  line-height: 1.4;
+  margin-left: 20px; /* Отступ слева */
   flex: 1; /* Растягиваем параграф на всю доступную ширину */
+  max-width: 500px; /* Максимальная ширина параграфа */
 }
 
 @media (max-width: 767px) {
   .pluses {
     margin-top: 100px;
+    height: 25vh;
+    margin-bottom: 80px;
+    width: 80%;
+    line-height: 1.3;
   }
   .pluses h1 {
+    margin-top: 0px;
+    margin-left: 0px;
     font-size: 46px; /* Уменьшаем размер шрифта для мобильных версий */
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
+    margin-bottom: 0px;
   }
   .pluses p {
-    font-size: 17px; /* Уменьшаем размер шрифта для мобильных версий */
+    padding: 20px;
+    font-size: 15px; /* Уменьшаем размер шрифта для мобильных версий */
     text-align: center;
   }
 }
-
-/* Добавляем медиа-запросы для десктопных версий */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1200px) {
+  .pluses h1 {
+    font-size: 60px;
+  }
   .mission-content {
     flex-direction: row; /* Возвращаем горизонтальное расположение для десктопных версий */
   }
   .pluses p {
-    margin-left: 120px; /* Возвращаем отступ для десктопных версий */
+    padding-top: 50px;
+    font-size: 19px;
+  }
+}
+/* Добавляем медиа-запросы для десктопных версий */
+@media (min-width: 1201px) {
+  .mission-content {
+    flex-direction: row; /* Возвращаем горизонтальное расположение для десктопных версий */
+  }
+  .pluses p {
+    margin-left: 100px; /* Возвращаем отступ для десктопных версий */
   }
 }
 
@@ -1066,12 +1081,24 @@ transition: .3s ease-in-out;
   background-color: #7873fc23;
 
 }
-
-
+@media (max-width: 700px) {
+  .purple-line {
+    background-color: #9370DB;
+    height: 15px;
+    width: 100%;
+    z-index: 0;
+  }
+  .course {
+    padding-top: 120px;
+  }
+    .row{
+        flex-direction: column;
+    }
+  }
 /*---- campus ----*/
 
 .campus {
-width: 70%;
+width: 60%;
 margin: auto;
 text-align: center;
 padding-top: 84px;
@@ -1164,7 +1191,7 @@ opacity: 1;
 }
 @media screen and (max-width: 1200px) {
 .campus {
-    width: 85%; /* увеличиваем ширину блока на более крупных экранах */
+    width: 95%; /* увеличиваем ширину блока на более крупных экранах */
 }
 
 .campus h2 {
@@ -1212,7 +1239,7 @@ opacity: 1;
     padding: 5px 5px;
   }
   .cta {
-    width: 95%;
+    width: 85%;
   }
 }
 
@@ -1222,12 +1249,12 @@ opacity: 1;
   }
 
   .cta h1 {
-    margin-bottom: 20px; /* Уменьшаем отступ после заголовка */
+    margin-bottom: 25px; /* Уменьшаем отступ после заголовка */
   }
 
   .hero-btn {
     font-size: 14px; /* Уменьшаем размер шрифта кнопки */
-    padding: 10px 20px; /* Уменьшаем внутренние отступы кнопки */
+    padding: 10px 18px; /* Уменьшаем внутренние отступы кнопки */
   }
 }
 
@@ -1293,7 +1320,7 @@ padding-bottom: 50px;
 }
 
 .wrapper i {
-top: 60%;
+top: 47%;
 height: 44px;
 width: 44px;
 color: #dadada;
@@ -1305,7 +1332,7 @@ line-height: 44px;
 background: #524FD5;
 border-radius: 50%;
 transform: translateY(-50%);
-transition: transform 0.1s linear;
+transition: transform 0.1s linear, background 0.3s;
 }
 
 .wrapper i:active {
@@ -1331,7 +1358,7 @@ cursor: pointer;
 overflow: hidden;
 white-space: nowrap;
 scroll-behavior: smooth;
-display: flex; /* Добавлено, чтобы сделать дочерние элементы горизонтальными */
+display: flex;
 }
 
 .carousel.dragging {
@@ -1388,7 +1415,7 @@ right: 0px;
   position: relative;
   margin-top: 100px;
   width: 100%;
-  background: #7e42eede;
+  background: #9055fd;
   min-height: 100px;
   padding: 20px 0px;
   display: flex;
@@ -1418,7 +1445,7 @@ right: 0px;
 .social-icon__link {
   font-size: 2rem;
   color: #fff;
-  margin: 0 10px;
+  margin: 20px 15px 0 0;
   display: inline-block;
   transition: 0.5s;
 }
@@ -1467,14 +1494,14 @@ right: 0px;
 
 .wave#wave2 {
   z-index: 999;
-  opacity: 0.5;
+  opacity: 0.6;
   bottom: 10px;
   animation: animate 7s linear infinite !important;
 }
 
 .wave#wave3 {
   z-index: 1000;
-  opacity: 0.2;
+  opacity: 0.4;
   bottom: 15px;
   animation: animateWaves 6s linear infinite;
 }

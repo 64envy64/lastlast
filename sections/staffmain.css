@@ -728,9 +728,9 @@ body.open .menu .dropbtn {
   margin-bottom: 130px; /* Отступ между элементами внизу */
 }
 .profile .profile-img {
-  height: 260px;
-  width: 260px;
-  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 0%;
   object-fit: cover;
 }
 .user-name {
