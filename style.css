@@ -310,7 +310,7 @@ transform: rotate(180deg);
     font-size: 32px;
   }
   .questions-container{
-    max-width: 40vh;
+    max-width: 41vh;
     margin: 0 auto;
     }
   .question span {
@@ -1391,9 +1391,15 @@ margin-left: 0px;
 }
 @media screen and (max-width: 700px) {
 .wrapper {
-  max-width: 400px;
+  max-width: 340px;
   padding-top: 50px;
   margin: 0 auto; 
+}
+.wrapper i {
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+  line-height: 40px;
 }
 .wrapper i:first-child {
 left: 0px;
