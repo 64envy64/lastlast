@@ -413,7 +413,7 @@ z-index: -1;
   top: 1%;
   left: 50%; /* Расположение по центру */
   transform: translateX(-50%); /* Центрирование логотипа */
-  z-index: 1000; /* Убедитесь, что z-index выше, чем у других элементов */
+  z-index: 1501;
 }
 .header .logo {
 width: 100%;
@@ -990,7 +990,7 @@ transform: translateY(-5);
     margin-top: 100px;
     height: 30vh;
     margin-bottom: 80px;
-    width: 80%;
+    width: 85%;
     line-height: 1.2;
   }
   .pluses h1 {
