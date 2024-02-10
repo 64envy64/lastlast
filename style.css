@@ -941,7 +941,7 @@ transform: translateY(-5);
 /*---- pluses ----*/
 
 .pluses {
-  margin: 5vh 0; /* Отступы сверху и снизу в зависимости от размера экрана */
+  margin: 5vh 0 5vh; /* Отступы сверху и снизу в зависимости от размера экрана */
   min-height: 21vh; /* Минимальная высота блока */
   width: 85%;
   margin: 0 auto;
@@ -986,7 +986,7 @@ transform: translateY(-5);
 @media (max-width: 767px) {
   .pluses {
     margin-top: 100px;
-    height: 25vh;
+    height: 35vh;
     margin-bottom: 80px;
     width: 80%;
     line-height: 1.3;
